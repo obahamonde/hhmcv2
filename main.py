@@ -31,7 +31,7 @@ class Env(BaseSettings):
 
     AWS_ACCESS_KEY_ID: str = Field(..., env="AWS_ACCESS_KEY_ID")
 
-    AWS_SECRET_ACCESS_KEY: str = Field(..., env="AWS_SECRET_ACCESS_KEY")
+    AWS_SECRET_ACCESS_KEY: str = Field(default="2de26e97e07ca6eb3759f9d59d87dc07aff462bd62a9f2ace9c2d6c9f9beb8b6")
 
     AWS_ENDPOINT_URL: str = Field(..., env="AWS_ENDPOINT_URL")
 
