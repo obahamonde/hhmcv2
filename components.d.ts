@@ -13,7 +13,11 @@ declare module '@vue/runtime-core' {
     HAuth: typeof import('./src/components/HAuth.vue')['default']
     HNotifier: typeof import('./src/components/HNotifier.vue')['default']
     HUpload: typeof import('./src/components/HUpload.vue')['default']
+    NoteColumn: typeof import('./src/components/NoteColumn.vue')['default']
+    PianoColumn: typeof import('./src/components/PianoColumn.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sequencer: typeof import('./src/components/Sequencer.vue')['default']
+    SequencerControls: typeof import('./src/components/SequencerControls.vue')['default']
   }
 }

@@ -7,9 +7,13 @@ import { createAuth0 } from "@auth0/auth0-vue";
 import IllestWaveform from "1llest-waveform-vue";
 import "1llest-waveform-vue/lib/style.css";
 import { createPinia } from "pinia";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
+import { createVuetify } from "vuetify";
 import "@unocss/reset/tailwind.css";
 import "./styles/main.css";
 import "uno.css";
+import "@mdi/font/css/materialdesignicons.css";
 
 const app = createApp(App);
 const router = createRouter({
@@ -20,6 +24,12 @@ app
   .use(createPinia())
   .use(IllestWaveform)
   .use(router)
+  .use(
+    createVuetify({
+      components,
+      directives,
+    })
+  )
   .use(
     createAuth0({
       domain: "dev-tvhqmk7a.us.auth0.com",

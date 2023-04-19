@@ -2,7 +2,7 @@ import { defineStore, acceptHMRUpdate } from "pinia";
 
 type NotifyProps = {
   message: string;
-  type: "success" | "error" | "info";
+  status: "success" | "error" | "info";
 };
 
 export const useStore = defineStore("state", () => {
@@ -14,8 +14,8 @@ export const useStore = defineStore("state", () => {
     Object.assign(state, newState);
   };
 
-  const notify = (message: string, type: "success" | "error" | "info") => {
-    state.notifications.push({ message, type });
+  const notify = (message: string, status: "success" | "error" | "info") => {
+    state.notifications.push({ message, status });
   };
 
   return {
